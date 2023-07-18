@@ -4,6 +4,7 @@ void run_client(MySocket *ms)
 {
 
     char buffer[1024];
+    // char *buffer = (char *)malloc(4096);
     while (1)
     {
         bzero(buffer, sizeof(buffer));
@@ -16,6 +17,7 @@ void run_client(MySocket *ms)
         recv(ms->sockfd, buffer, sizeof(buffer), 0);
         printf("%s\n", buffer);
     }
+    // free(buffer);
     close(ms->sockfd);
     printf("Disconnected from the server.\n");
 }

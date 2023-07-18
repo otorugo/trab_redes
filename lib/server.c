@@ -24,6 +24,7 @@ void run_chat_server(MySocket *ms)
         exit(EXIT_FAILURE);
     }
     char buffer[1024];
+    // char *buffer = (char *)malloc(4096);
     while (1)
     {
         bzero(buffer, sizeof(buffer));
@@ -32,10 +33,11 @@ void run_chat_server(MySocket *ms)
 
         bzero(buffer, sizeof(buffer));
         readLine(buffer);
-        add_nick(ms,buffer);
+        add_nick(ms, buffer);
         printf("%s\n", buffer);
         send(new_socket, ms->message, strlen(ms->message), 0);
     }
+    // free(buffer);
     close(new_socket);
     printf("[+]Client disconnected.\n\n");
 }
