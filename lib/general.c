@@ -1,8 +1,5 @@
 #include "general.h"
 
-
-
-
 void readLine(char *string)
 {
     char c = 0;
@@ -20,11 +17,10 @@ void readLine(char *string)
         string[i] = c;
         i++;
         c = getchar();
-    } while (c != '\n' && c != '\r');
+    } while (c != '\n' && c != '\r' && c != EOF);
 
     string[i] = '\0';
 }
-
 
 void add_nick(MySocket *ms, char *buffer)
 {
@@ -32,10 +28,6 @@ void add_nick(MySocket *ms, char *buffer)
     strcat(ms->message, " : ");
     strcat(ms->message, buffer);
 }
-
-
-
-
 
 void random_name(MySocket *cl)
 {

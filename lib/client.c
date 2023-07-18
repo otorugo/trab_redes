@@ -9,6 +9,10 @@ void run_client(MySocket *ms)
     {
         bzero(buffer, sizeof(buffer));
         readLine(buffer);
+
+        if (buffer[0] == EOF)
+            break;
+
         add_nick(ms, buffer);
         printf("%s\n", ms->message);
         send(ms->sockfd, ms->message, strlen(ms->message), 0);
