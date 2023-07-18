@@ -1,19 +1,8 @@
 #ifndef _CLIENT
 #define _CLIENT
 #include "general.h"
-#include <sys/socket.h>
+// #include <sys/socket.h>
 
-
-struct client
-{
-    char nick[20];
-    char message[MAX_BUFFER_SIZE+1];
-};
-
-
-void init_client(int port);
-
-
-
-
+void init_client(MySocket *ms);
+void run_client(MySocket *ms);
 #endif
