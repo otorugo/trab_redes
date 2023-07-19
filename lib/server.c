@@ -41,3 +41,25 @@ void run_chat_server(MySocket *ms)
     close(new_socket);
     printf("[+]Client disconnected.\n\n");
 }
+
+// void broadcast_server(MySocket *ms)
+// {
+//     Server s;
+//     s.qtd = 0;
+//     init_server(ms, 20);
+
+//     int addr_len = sizeof(*ms->servaddr);
+//     while (1)
+//     {
+//         if ((new_socket = accept(ms->sockfd, (struct sockaddr *)ms->servaddr, (socklen_t *)&addr_len)) < 0)
+//         {
+//             perror("accept failed");
+//             exit(EXIT_FAILURE);
+//         }
+//         s.broadcast_list[s.qtd] = init_client_fd(6667,new_socket);
+//         s.qtd++;
+
+        
+
+//     }
+// }

@@ -36,7 +36,24 @@ void menu()
 
         break;
     case 2:
-        /* code */
+
+        // char aux[15];
+        // scanf("%s", aux);
+        // Server server;
+        // MySocket ms = init_socket(6667);
+        // if (!strcmp(aux, "/connect"))
+        // {
+        //     if (connect(ms.sockfd, (struct sockaddr *)ms.servaddr, sizeof(*ms.servaddr)) < 0)
+        //     {
+        //         perror("Conexao falhou");
+        //         exit(EXIT_FAILURE);
+        //     }
+        // }
+        // else
+        // {
+        //     broadcast_server(ms);
+        // };
+
         break;
     case 3:
         /* code */

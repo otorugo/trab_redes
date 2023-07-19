@@ -3,6 +3,6 @@
 #include "general.h"
 // #include <sys/socket.h>
 
-void init_client(MySocket *ms);
+MySocket init_client_fd(int port, int fd);
 void run_client(MySocket *ms);
 #endif

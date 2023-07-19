@@ -7,3 +7,6 @@ Versão Linux : 5.19.0-46-generic
 Distro :    Ubuntu 22
 ---
 Compilador : gcc
+
+
+link video https://youtu.be/kSTRTJ-BuF4

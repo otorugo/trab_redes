@@ -1,5 +1,16 @@
 #include "client.h"
 
+MySocket init_client_fd(int port, int fd)
+{
+    MySocket cl;
+    struct sockaddr_in serv;
+    cl.servaddr = &serv;
+    cl.servaddr->sin_family = AF_INET;
+    cl.servaddr->sin_port = htons(port);
+    cl.sockfd = fd;
+    inet_aton("localhost", &cl.servaddr->sin_addr);
+};
+
 void run_client(MySocket *ms)
 {
 
